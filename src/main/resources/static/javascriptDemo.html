@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JS 학습</title>
+<style>
+.image {
+	border: 1px solid purple;
+}
+</style>
+</head>
+<body>
+	<h3>개인 정보 입력</h3>
+	<div>
+		<img class="image" id="jb_face" src="img/beard_w.png">
+	</div>
+	<script>
+		function showBeard() {
+			jb_face.setAttribute("src", "img/beard_w.PNG")
+		}
+		function hideBeard() {
+			jb_face.setAttribute("src", "img/beard_wo.PNG")
+		}
+		var jb_face = document.getElementById("jb_face");
+
+		jb_face.onmouseout = hideBeard;
+		jb_face.onmouseover = showBeard;
+	</script>
+</body>
+</html>
